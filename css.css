@@ -1,0 +1,123 @@
+@keyframes move {
+    0% {top:0; right:0;}
+    50% {top:-8px; right:0;}
+    100% {top: 0; right:0;}
+}
+@keyframes turn-right {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes turn-right {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+#quote-box {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    box-shadow: 2px 5px 2px 2px lightsalmon;
+    padding: 1.5em;
+    border-radius: 30px;
+
+}
+#text-quote {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6em;
+    margin: 0;
+    text-align: center;
+
+}
+#text {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.fa-quote-right {
+    float: right;
+}
+#author {
+    margin: 1.5em 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#author-quote {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+}
+#info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#box-button, #icon {
+    
+    width: 50%;
+}
+#box-button {
+    display: flex;
+    justify-content: flex-end;
+}
+#new-quote {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.9em;
+    border: none;
+    font-family: 'Days One', sans-serif;
+    font-size: 1em;
+}
+#new-quote:hover {
+    position: relative;
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+i.fa-brands:hover {
+    position: relative;
+    animation-name: turn-right;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    -webkit-animation-name: turn-right;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+}
+.social {
+    padding-right: 0.7em;
+}
+#tweet-quote {
+    margin-top: 3em;
+    text-decoration: none;
+}
+@media only screen and (max-width: 535px) {
+ 
+}
